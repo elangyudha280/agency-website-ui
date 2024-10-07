@@ -50,7 +50,7 @@ function Navbar() {
 
   return (
    <nav className="w-full  fixed top-0 left-0 z-[15]">
-    <section className="navbar max-w-[1200px] border-2 border-red-500 mx-auto max-[450px]:flex-col t">
+    <section className="navbar max-w-[1200px] mx-auto max-[450px]:flex-col t">
         {/*//! nav item left */}
         <div className="navbar-start max-[450px]:w-full">
             {/* button dropdown nav items */}
