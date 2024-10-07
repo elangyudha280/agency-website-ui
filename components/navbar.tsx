@@ -49,7 +49,7 @@ function Navbar() {
     ]
 
   return (
-   <nav className="w-full  fixed top-0 left-0 z-[15]">
+   <nav className="w-full  fixed top-0 left-0 z-[15] ">
     <section className="navbar max-w-[1200px] mx-auto max-[450px]:flex-col t">
         {/*//! nav item left */}
         <div className="navbar-start max-[450px]:w-full">
@@ -109,7 +109,7 @@ function Navbar() {
         {/*//! nav end */}
         <div className="navbar-end gap-2 max-[450px]:w-full">
             <a href='#' className="text-[13px] w-full text-center min-[450px]:w-auto   px-7 py-2 bg-transparent text-c-green-200 rounded-md">Login</a>
-            <a href='#' className="text-[13px] w-full text-center min-[450px]:w-auto  px-7 py-2 bg-transparent text-white rounded-md bg-c-green-200">Sign Up</a>
+            <a href='#' className="text-[13px] w-full text-center min-[450px]:w-auto  px-7 py-2 text-white rounded-md bg-c-green-200">Sign Up</a>
         </div>
     </section>
    </nav>
