@@ -1,5 +1,6 @@
 
-import React from 'react'
+'use client'
+import React, {useLayoutEffect } from 'react'
 
 // import component
 import Image from 'next/image'
@@ -13,7 +14,6 @@ import { NavItemInterface } from '@/interaface/navbarInterface'
 // import pkg
 import Link from 'next/link'
 function Navbar() {
-
     //! data nav items
     const navItems : NavItemInterface[] = [
         {
@@ -49,8 +49,8 @@ function Navbar() {
     ]
 
   return (
-   <nav className="w-full  fixed top-0 left-0 z-[15] ">
-    <section className="navbar max-w-[1200px] mx-auto max-[450px]:flex-col t">
+   <nav className={`w-full  fixed top-0 left-0 z-[15] bg-white shadow-sm`}>
+    <section className="navbar max-w-[1200px] mx-auto max-[450px]:flex-col px-5">
         {/*//! nav item left */}
         <div className="navbar-start max-[450px]:w-full">
             {/* button dropdown nav items */}
@@ -75,7 +75,7 @@ function Navbar() {
                 {
                 navItems?.map((el:NavItemInterface)=>{
                     return (
-                        <Link href={`${el.url}`} scroll={false} className='menu hover:bg-c-slate-200/20 rounded-sm'>
+                        <Link key={el.id} href={`${el.url}`} scroll={false} className='menu hover:bg-c-slate-200/20 rounded-sm'>
                             {el.title}
                         </Link>
                     )
@@ -98,7 +98,7 @@ function Navbar() {
             {
                 navItems?.map((el:NavItemInterface)=>{
                     return (
-                        <Link href={`${el.url}`} scroll={false} className='text-c-[#18191F] text-[14px]'>
+                        <Link key={el.id} href={`${el.url}`} scroll={false} className='text-c-[#18191F] text-[14px]'>
                             {el.title}
                         </Link>
                     )
