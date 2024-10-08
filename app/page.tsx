@@ -9,9 +9,11 @@ import iconJumbotron from '@/assets/images/bg-jumbotrons.svg'
 
 // import interface
 import  ImgClientStore from '@/interaface/iconClientInterface'
+import CardComunityInterface from "@/interaface/comunityInterface";
 
 // import store
 import iconClient from "@/store/imgClientStore";
+import CardComunity from "@/store/cardComunityStore";
 
 export default function Home() {
   return (
@@ -44,28 +46,67 @@ export default function Home() {
 
           {/*//! right content */}
           <div className="relative flex justify-center">
-            <Image src={iconJumbotron} alt="iconjumbotron" loading="lazy"/>
+            <Image src={iconJumbotron} alt="iconjumbotron" className="select-none" loading="lazy"/>
           </div>
         </section>
       </section>
 
-      {/*//! section out client */}
-      <section className="relative max-w-[1200px] mt-8 mx-auto">
+      {/*//! section our client */}
+      <section className="relative max-w-[1200px] mt-16 mx-auto px-2">
         {/* title our client */}
         <div className="relative w-full">
-          <h2 className="text-slate-950 font-semibold text-3xl text-center mb-1">Our Clients</h2>
+          <h2 className="text-slate-950 font-semibold text-2xl min-[510px]:text-3xl text-center mb-1">Our Clients</h2>
           <p className="text-center text-c-slate-300 font-medium">
             We have been working with some Fortune 500+ clients
           </p>
         </div>
 
         {/* image client */}
-        <div className="relative w-full flex gap-4 item-centers mt-8  flex-wrap">
+        <div className="relative w-full flex gap-4 item-centers mt-14  flex-wrap">
             {
               iconClient.map((el:ImgClientStore)=>{
                 return <Image key={el.id} src={el.poster} alt={'iconclient'} className="flex-1 h-[50px] select-none" />
               })
             }
+        </div>
+      </section>
+
+      {/*//! section comunity */}
+      <section className="relative max-w-[1200px] mt-16 px-2 mx-auto ">
+        {/* title comunty */}
+        <div className="relative w-full">
+          <h2 className="text-slate-950 font-semibold text-2xl min-[510px]:text-3xl text-center mb-1 max-w-[500px] mx-auto">Manage your entire community in a single system</h2>
+          <p className="text-center text-c-slate-300 font-medium mt-3">
+           Who is Nextcent suitable for?
+          </p>
+        </div>
+
+        {/* card comunity */}
+        <div className="flex w-full gap-x-3 gap-y-10 justify-center flex-wrap mt-14">
+          {
+            CardComunity.map((el:CardComunityInterface)=>{
+              return (
+                <div className="relative w-[300px]  p-4 rounded-md shadow-[0_1px_2px_rgba(0,0,0,0.2)] flex flex-col items-center gap-2">
+                  {/* card header */}
+                  <div className="relative w-full flex justify-center flex-col  items-center">
+                    <div className="relative">
+                      <Image src={el.poster} alt="icon" className="select-none" />
+                    </div>
+                  </div>
+                  {/* title */}
+                  <h2 className="text-slate-950 text-center font-semibold text-xl w-[60%] ">
+                    {el.title}
+                  </h2>
+                  {/* description */}
+                  <p className="text-c-slate-300 text-[13px] text-center line-clamp-3">
+                    {el.description}
+                  </p>
+
+                </div>
+              )
+            })
+          }
+
         </div>
       </section>
     </section>
