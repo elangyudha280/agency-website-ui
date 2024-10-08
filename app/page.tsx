@@ -6,6 +6,7 @@ import Image from "next/image";
 
 // import image
 import iconJumbotron from '@/assets/images/bg-jumbotrons.svg'
+import iconPanaLogin from '@/assets/images/mobile-login/pana.png'
 
 // import interface
 import  ImgClientStore from '@/interaface/iconClientInterface'
@@ -52,7 +53,7 @@ export default function Home() {
       </section>
 
       {/*//! section our client */}
-      <section className="relative max-w-[1200px] mt-16 mx-auto px-2">
+      <section className="relative max-w-[1200px] mt-16 mx-auto px-3">
         {/* title our client */}
         <div className="relative w-full">
           <h2 className="text-slate-950 font-semibold text-2xl min-[510px]:text-3xl text-center mb-1">Our Clients</h2>
@@ -72,7 +73,7 @@ export default function Home() {
       </section>
 
       {/*//! section comunity */}
-      <section className="relative max-w-[1200px] mt-16 px-2 mx-auto ">
+      <section className="relative max-w-[1200px] mt-16 px-3 mx-auto ">
         {/* title comunty */}
         <div className="relative w-full">
           <h2 className="text-slate-950 font-semibold text-2xl min-[510px]:text-3xl text-center mb-1 max-w-[500px] mx-auto">Manage your entire community in a single system</h2>
@@ -108,6 +109,33 @@ export default function Home() {
           }
 
         </div>
+      </section>
+
+      {/*//! section information 3 */}
+      <section className="relative max-w-[1200px] mt-16 px-3 mx-auto flex-col  flex gap-5 md:flex-row">
+        {/* left content infirmation 3 */}
+        <div className="relative flex justify-center">
+            <Image src={iconPanaLogin} alt="iconPanaLogin" className="select-none" loading="lazy"/>
+        </div>
+
+        {/*right content information 3 */}
+        <section className="relative w-full flex-1 flex flex-col gap-2 md:py-10 ">
+            {/*title */}
+            <div className="relative">
+              <h2 className=" text-c-slate-400 text-2xl sm:text-3xl font-semibold">The unseen of spending three years at Pixelgrade </h2>
+            </div>
+            {/* desc */}
+            <p className="my-5 text-c-slate-400 text-[13px] flex-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.
+            </p>
+            {/* button action jumbotron */}
+            <div className="relative">
+              <button className="px-5 py-2 rounded-md text-[14px] bg-c-green-200 text-white transition-all duration-200 hover:bg-transparent hover:ring-1 hover:ring-c-green-200  hover:text-c-green-200 ">
+                Learn More
+              </button>
+            </div>
+          </section>
+        
       </section>
     </section>
   );
