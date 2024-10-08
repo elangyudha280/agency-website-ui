@@ -109,7 +109,7 @@ function Navbar() {
         {/*//! nav end */}
         <div className="navbar-end gap-2 max-[450px]:w-full">
             <a href='#' className="text-[13px] w-full text-center min-[450px]:w-auto   px-7 py-2 bg-transparent text-c-green-200 rounded-md">Login</a>
-            <a href='#' className="text-[13px] w-full text-center min-[450px]:w-auto  px-7 py-2 text-white rounded-md bg-c-green-200">Sign Up</a>
+            <a href='#' className="text-[13px] w-full text-center min-[450px]:w-auto  px-7 py-2 text-white rounded-md bg-c-green-200 transition-all duration-200 hover:bg-transparent hover:ring-1 hover:ring-c-green-200  hover:text-c-green-200">Sign Up</a>
         </div>
     </section>
    </nav>

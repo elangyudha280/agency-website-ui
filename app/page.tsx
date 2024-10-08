@@ -15,7 +15,7 @@ import iconClient from "@/store/imgClientStore";
 
 export default function Home() {
   return (
-    <section className="relative font-poppins w-full h-[100vh] overflow-x-hidden overflow-auto border-2 border-red-500">
+    <section className="relative font-poppins w-full h-[100vh] overflow-x-hidden overflow-auto border-2 border-red-500 pb-10">
       {/*//! navbar */}
       <Navbar/>
 
@@ -36,7 +36,7 @@ export default function Home() {
             </p>
             {/* button action jumbotron */}
             <div className="relative">
-              <button className="px-5 py-2 rounded-md text-[14px] bg-c-green-200 text-white ">
+              <button className="px-5 py-2 rounded-md text-[14px] bg-c-green-200 text-white transition-all duration-200 hover:bg-transparent hover:ring-1 hover:ring-c-green-200  hover:text-c-green-200 ">
                 Register
               </button>
             </div>
@@ -46,9 +46,7 @@ export default function Home() {
           <div className="relative flex justify-center">
             <Image src={iconJumbotron} alt="iconjumbotron" loading="lazy"/>
           </div>
-
         </section>
-
       </section>
 
       {/*//! section out client */}
@@ -62,10 +60,10 @@ export default function Home() {
         </div>
 
         {/* image client */}
-        <div className="relative w-full flex gap-4 item-centers mt-5  flex-wrap">
+        <div className="relative w-full flex gap-4 item-centers mt-8  flex-wrap">
             {
               iconClient.map((el:ImgClientStore)=>{
-                return <Image key={el.id} src={el.poster} alt={'iconclient'} className="flex-1 h-[50px]" />
+                return <Image key={el.id} src={el.poster} alt={'iconclient'} className="flex-1 h-[50px] select-none" />
               })
             }
         </div>
