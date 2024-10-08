@@ -7,6 +7,12 @@ import Image from "next/image";
 // import image
 import iconJumbotron from '@/assets/images/bg-jumbotrons.svg'
 
+// import interface
+import  ImgClientStore from '@/interaface/iconClientInterface'
+
+// import store
+import iconClient from "@/store/imgClientStore";
+
 export default function Home() {
   return (
     <section className="relative font-poppins w-full h-[100vh] overflow-x-hidden overflow-auto border-2 border-red-500">
@@ -43,6 +49,26 @@ export default function Home() {
 
         </section>
 
+      </section>
+
+      {/*//! section out client */}
+      <section className="relative max-w-[1200px] mt-8 mx-auto">
+        {/* title our client */}
+        <div className="relative w-full">
+          <h2 className="text-slate-950 font-semibold text-3xl text-center mb-1">Our Clients</h2>
+          <p className="text-center text-c-slate-300 font-medium">
+            We have been working with some Fortune 500+ clients
+          </p>
+        </div>
+
+        {/* image client */}
+        <div className="relative w-full flex gap-4 item-centers mt-5  flex-wrap">
+            {
+              iconClient.map((el:ImgClientStore)=>{
+                return <Image key={el.id} src={el.poster} alt={'iconclient'} className="flex-1 h-[50px]" />
+              })
+            }
+        </div>
       </section>
     </section>
   );
