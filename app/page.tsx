@@ -11,12 +11,14 @@ import iconPanaLogin from '@/assets/images/mobile-login/pana.png'
 // import interface
 import  ImgClientStore from '@/interaface/iconClientInterface'
 import CardComunityInterface from "@/interaface/comunityInterface";
-
+import { InterfaceLocalBisnis } from "@/store/iconLocalBisnis";
 // import store
 import iconClient from "@/store/imgClientStore";
 import CardComunity from "@/store/cardComunityStore";
+import { infoLocalBisnis } from "@/store/iconLocalBisnis";
 
 export default function Home() {
+
   return (
     <section className="relative font-poppins w-full h-[100vh] overflow-x-hidden overflow-auto border-2 border-red-500 pb-10">
       {/*//! navbar */}
@@ -53,7 +55,7 @@ export default function Home() {
       </section>
 
       {/*//! section our client */}
-      <section className="relative max-w-[1200px] mt-16 mx-auto px-3">
+      <section className="relative max-w-[1200px] mt-16 mx-auto px-4">
         {/* title our client */}
         <div className="relative w-full">
           <h2 className="text-slate-950 font-semibold text-2xl min-[510px]:text-3xl text-center mb-1">Our Clients</h2>
@@ -73,7 +75,7 @@ export default function Home() {
       </section>
 
       {/*//! section comunity */}
-      <section className="relative max-w-[1200px] mt-16 px-3 mx-auto ">
+      <section className="relative max-w-[1200px] mt-16 px-4 mx-auto ">
         {/* title comunty */}
         <div className="relative w-full">
           <h2 className="text-slate-950 font-semibold text-2xl min-[510px]:text-3xl text-center mb-1 max-w-[500px] mx-auto">Manage your entire community in a single system</h2>
@@ -112,7 +114,7 @@ export default function Home() {
       </section>
 
       {/*//! section information 3 */}
-      <section className="relative max-w-[1200px] mt-16 px-3 mx-auto flex-col  flex gap-5 md:flex-row">
+      <section className="relative max-w-[1200px] mt-16 px-4 mx-auto flex-col  flex gap-5 md:flex-row">
         {/* left content infirmation 3 */}
         <div className="relative flex justify-center">
             <Image src={iconPanaLogin} alt="iconPanaLogin" className="select-none" loading="lazy"/>
@@ -136,6 +138,44 @@ export default function Home() {
             </div>
           </section>
         
+      </section>
+
+      {/*//! section bisnis local */}
+      <section className="relative bg-c-slate-100 py-[70px] mt-16 px-4">
+        <section className="mx-auto max-w-[1200px] flex gap-4  flex-col lg:flex-row">
+          {/* left content bisnis local */}
+          <section className="relative w-full flex-1 flex flex-col gap-3">
+            {/*title */}
+            <div className="relative">
+              <h3 className=" text-c-slate-400 text-3xl  font-semibold">Helping a local</h3>
+              <h2 className=" text-c-green-200 text-3xl  font-semibold">business reinvent itself</h2>
+            </div>
+            {/* desc */}
+            <p className="text-c-slate-400 text-[14px] flex-1">
+            We reached here with our hard work and dedication
+            </p>
+          </section>
+          {/* right content bisnis local */}
+          <section className="relative w-full grid grid-cols-1 auto-rows-auto gap-2 lg:w-[600px] sm:grid-cols-2">
+            {
+              infoLocalBisnis?.map((el:InterfaceLocalBisnis) => {
+                return (
+                  <div key={el.id} className="relative w-full flex gap-3 py-3 ">
+                    {/* icon */}
+                    <Image src={el.icon} alt="iconLocalBisnis1" className="select-none"/>
+                    {/* description */}
+                    <div className="flex-1  flex flex-col">
+                      <h3 className="text-xl font-semibold text-slate-950 m-0 p-0">{el.count}</h3>
+                      <h3 className="text-sm text-c-slate-300 m-0 p-0">{el.title}</h3>
+                    </div>
+                  </div>
+                )
+              })
+            }
+            
+
+          </section>
+        </section>
       </section>
     </section>
   );
