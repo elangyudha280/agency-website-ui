@@ -7,6 +7,7 @@ import Image from "next/image";
 // import image
 import iconJumbotron from '@/assets/images/bg-jumbotrons.svg'
 import iconPanaLogin from '@/assets/images/mobile-login/pana.png'
+import iconRafiki from '@/assets/images/mobile-login/rafiki.png'
 
 // import interface
 import  ImgClientStore from '@/interaface/iconClientInterface'
@@ -117,7 +118,7 @@ export default function Home() {
       <section className="relative max-w-[1200px] mt-16 px-4 mx-auto flex-col  flex gap-5 md:flex-row">
         {/* left content infirmation 3 */}
         <div className="relative flex justify-center">
-            <Image src={iconPanaLogin} alt="iconPanaLogin" className="select-none" loading="lazy"/>
+            <Image src={iconRafiki} alt="iconPanaLogin" className="select-none" loading="lazy"/>
         </div>
 
         {/*right content information 3 */}
@@ -176,6 +177,33 @@ export default function Home() {
 
           </section>
         </section>
+      </section>
+
+      {/*//! section information 5 */}
+      <section className="relative max-w-[1200px] mt-16 px-4 mx-auto flex-col  flex gap-5 md:flex-row">
+        {/* left content infirmation 3 */}
+        <div className="relative flex justify-center">
+            <Image src={iconPanaLogin} alt="iconPanaLogin" className="select-none" loading="lazy"/>
+        </div>
+
+        {/*right content information 3 */}
+        <section className="relative w-full flex-1 flex flex-col gap-2 md:py-10 ">
+            {/*title */}
+            <div className="relative">
+              <h2 className=" text-c-slate-400 text-2xl sm:text-3xl font-semibold">How to design your site footer like we did</h2>
+            </div>
+            {/* desc */}
+            <p className="my-5 text-c-slate-400 text-[13px] flex-1">
+            Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.
+            </p>
+            {/* button action  */}
+            <div className="relative">
+              <button className="px-5 py-2 rounded-md text-[14px] bg-c-green-200 text-white transition-all duration-200 hover:bg-transparent hover:ring-1 hover:ring-c-green-200  hover:text-c-green-200 ">
+                Learn More
+              </button>
+            </div>
+          </section>
+        
       </section>
     </section>
   );
