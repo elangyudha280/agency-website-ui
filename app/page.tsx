@@ -107,7 +107,7 @@ export default function Home() {
           {
             CardComunity.map((el:CardComunityInterface)=>{
               return (
-                <div className="relative w-[300px]  p-4 rounded-md shadow-[0_1px_2px_rgba(0,0,0,0.2)] flex flex-col items-center gap-2">
+                <div key={el.id} className="relative w-[300px]  p-4 rounded-md shadow-[0_1px_2px_rgba(0,0,0,0.2)] flex flex-col items-center gap-2">
                   {/* card header */}
                   <div className="relative w-full flex justify-center flex-col  items-center">
                     <div className="relative">
@@ -271,7 +271,7 @@ export default function Home() {
           {
             cardMarketing.map((el:any)=>{
               return (
-                <div className="relative w-[300px]  p-5 rounded-md  flex flex-col items-center gap-4 bg-c-slate-100">
+                <div key={el.id} className="relative w-[300px]  p-5 rounded-md  flex flex-col items-center gap-4 bg-c-slate-100">
                     <h2 className="text-center text-slate-600 text-[15px] flex-1 line-clamp-3">
                       {el.desc}
                     </h2>

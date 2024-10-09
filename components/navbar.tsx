@@ -1,6 +1,6 @@
 
 'use client'
-import React, {useLayoutEffect } from 'react'
+import React from 'react'
 
 // import component
 import Image from 'next/image'
