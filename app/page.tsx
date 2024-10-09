@@ -286,6 +286,18 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/*//! section info demo*/}
+      <section className="relative bg-c-slate-100 py-[30px] mt-16 px-4">
+        <h2 className="text-center font-semibold text-2xl mx-auto min-[500px]:text-5xl max-w-[700px] ">
+        Pellentesque suscipit fringilla libero eu.
+        </h2>
+        <div className="relative w-full flex justify-center mt-7">
+              <button className="px-5 py-2 rounded-md text-[14px] bg-c-green-200 text-white transition-all duration-200 hover:bg-transparent hover:ring-1 hover:ring-c-green-200  hover:text-c-green-200 ">
+                Get a Demo
+              </button>
+            </div>
+      </section>
     </section>
   );
 }
