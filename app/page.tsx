@@ -8,11 +8,13 @@ import Image from "next/image";
 import iconJumbotron from '@/assets/images/bg-jumbotrons.svg'
 import iconPanaLogin from '@/assets/images/mobile-login/pana.png'
 import iconRafiki from '@/assets/images/mobile-login/rafiki.png'
+import iconinf3 from '@/assets/images/mobile-login/inf3.jpg'
 
 // import interface
 import  ImgClientStore from '@/interaface/iconClientInterface'
 import CardComunityInterface from "@/interaface/comunityInterface";
 import { InterfaceLocalBisnis } from "@/store/iconLocalBisnis";
+
 // import store
 import iconClient from "@/store/imgClientStore";
 import CardComunity from "@/store/cardComunityStore";
@@ -204,6 +206,39 @@ export default function Home() {
             </div>
           </section>
         
+      </section>
+
+      {/*//! section customer */}
+      <section className="relative bg-c-slate-100 py-[70px] mt-16 px-4">
+        <section className="mx-auto max-w-[1200px] flex gap-7  flex-col lg:flex-row  max-lg:items-center">
+          {/* left content  */}
+          <section className="relative  w-full h-full lg:w-[400px] lg:h-[400px] overflow-hidden rounded-md">
+           <Image src={iconinf3} alt="iconinf3" className="object-center object-cover w-full h-full" />
+          </section>
+          {/* rigth content */}
+          <section className="w-full flex-1 py-3 flex flex-col gap-2">
+            <p className="text-[15px] text-c-slate-300 text-justify">
+              Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+            </p>
+            {/*  */}
+            <div className="flex-1 h-full">
+              <h2 className="m-0 p-0 text-c-green-200 font-semibold text-[20px]">
+              Tim Smith
+              </h2>
+              <p className="text-c-slate-300 text-[14px]">
+                British Dragon Boat Racing Association
+              </p>
+            </div>
+            {/*  */}
+               <div className="flex gap-2 flex-wrap py-5">
+               {
+               iconClient?.map((el:ImgClientStore)=>{
+                return  <Image key={el.id} src={el.poster} alt="" />
+               })
+               }
+              </div>
+          </section>
+        </section>
       </section>
     </section>
   );
