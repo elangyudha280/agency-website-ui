@@ -85,7 +85,7 @@ function Navbar() {
             </div>
             
             {/* title nav */}
-            <a className="relative flex gap-2 items-center  h-full" href='#'>
+            <a className="relative flex gap-2 items-center  h-full" href='#' >
                 <Image src={iconNav} alt='icon' />
                 <h2 className="text text-2xl font-semibold">
                     Nexcent

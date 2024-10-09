@@ -3,7 +3,7 @@ import React from "react";
 // import component
 import { Navbar } from "@/components/navbar";
 import Image from "next/image";
-
+import Footer from "@/components/footer";
 // import image
 import iconJumbotron from '@/assets/images/bg-jumbotrons.svg'
 import iconPanaLogin from '@/assets/images/mobile-login/pana.png'
@@ -38,7 +38,7 @@ export default function Home() {
   ] 
 
   return (
-    <section className="relative font-poppins w-full h-[100vh] overflow-x-hidden overflow-auto border-2 border-red-500 pb-10">
+    <section id="main-section" className="relative font-poppins w-full h-[100vh] overflow-x-hidden overflow-auto">
       {/*//! navbar */}
       <Navbar/>
 
@@ -298,6 +298,9 @@ export default function Home() {
               </button>
             </div>
       </section>
+
+      {/*//! footer */}
+      <Footer/>
     </section>
   );
 }
