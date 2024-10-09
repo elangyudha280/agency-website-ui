@@ -22,6 +22,21 @@ import { infoLocalBisnis } from "@/store/iconLocalBisnis";
 
 export default function Home() {
 
+  const cardMarketing : readonly {id:string|number,desc:string}[] = [
+    {
+      id:1,
+      desc:'Creating Streamlined Safeguarding Processes with OneRen'
+    },
+    {
+      id:2,
+      desc:'What are your safeguarding responsibilities and how can you manage them?'
+    },
+    {
+      id:1,
+      desc:'Revamping the Membership Model with Triathlon Australia'
+    },
+  ] 
+
   return (
     <section className="relative font-poppins w-full h-[100vh] overflow-x-hidden overflow-auto border-2 border-red-500 pb-10">
       {/*//! navbar */}
@@ -208,7 +223,7 @@ export default function Home() {
         
       </section>
 
-      {/*//! section customer */}
+      {/*//! section customerS */}
       <section className="relative bg-c-slate-100 py-[70px] mt-16 px-4">
         <section className="mx-auto max-w-[1200px] flex gap-7  flex-col lg:flex-row  max-lg:items-center">
           {/* left content  */}
@@ -239,6 +254,37 @@ export default function Home() {
               </div>
           </section>
         </section>
+      </section>
+
+      {/*//! section marketing */}
+      <section className="relative max-w-[1200px] mt-16 px-4 mx-auto ">
+        {/* title marketing */}
+        <div className="relative w-full">
+          <h2 className="text-slate-950 font-semibold text-2xl min-[510px]:text-3xl text-center mb-1 max-w-[500px] mx-auto">Caring is the new marketing</h2>
+          <p className="text-center text-c-slate-300 font-medium mt-3">
+           The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​
+          </p>
+        </div>
+
+        {/* card marketing */}
+        <div className="flex w-full gap-x-3 gap-y-10 justify-center flex-wrap mt-14">
+          {
+            cardMarketing.map((el:any)=>{
+              return (
+                <div className="relative w-[300px]  p-5 rounded-md  flex flex-col items-center gap-4 bg-c-slate-100">
+                    <h2 className="text-center text-slate-600 text-[15px] flex-1 line-clamp-3">
+                      {el.desc}
+                    </h2>
+
+                    <button className="w-full text-center  capitalize text-c-green-200" >
+                      read more
+                    </button>
+                </div>
+              )
+            })
+          }
+
+        </div>
       </section>
     </section>
   );
