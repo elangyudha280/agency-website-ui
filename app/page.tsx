@@ -262,14 +262,14 @@ export default function Home() {
         <div className="relative w-full">
           <h2 className="text-slate-950 font-semibold text-2xl min-[510px]:text-3xl text-center mb-1 max-w-[500px] mx-auto">Caring is the new marketing</h2>
           <p className="text-center text-c-slate-300 font-medium mt-3">
-           The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​
+           The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who&apos;s joining the community, read about how our community are increasing their membership income and lot&apos;s more.​
           </p>
         </div>
 
         {/* card marketing */}
         <div className="flex w-full gap-x-3 gap-y-10 justify-center flex-wrap mt-14">
           {
-            cardMarketing.map((el:any)=>{
+            cardMarketing.map((el:{id:string|number,desc:string})=>{
               return (
                 <div key={el.id} className="relative w-[300px]  p-5 rounded-md  flex flex-col items-center gap-4 bg-c-slate-100">
                     <h2 className="text-center text-slate-600 text-[15px] flex-1 line-clamp-3">
